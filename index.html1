@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LearnUp - Gamified Learning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>LearnUp</h1>
+    <div class="user-profile">
+      <img src="https://i.imgur.com/TxzC70f.png" alt="User" class="profile-pic" />
+      <div>
+        <div><strong>Chandrika Mam</strong></div>
+        <div>Points: <span id="points">1450</span></div>
+        <div>Level: <span id="level">3</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section-box">
+    <h2>Progress</h2>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressBar">60%</div>
+    </div>
+  </section>
+
+  <section class="section-box">
+    <h2>Badges Earned</h2>
+    <div class="badge-list">
+      <div class="badge">🏅 Beginner</div>
+      <div class="badge">🎯 Accuracy Pro</div>
+      <div class="badge">🔥 5-Day Streak</div>
+      <div class="badge">🌟 Level 3 Achiever</div>
+    </div>
+  </section>
+
+  <section class="section-box leaderboard">
+    <h2>Leaderboard</h2>
+    <table>
+      <thead>
+        <tr><th>Rank</th><th>Name</th><th>Points</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Chandrika Mam</td><td>1450</td></tr>
+        <tr><td>2</td><td>Ravi</td><td>1380</td></tr>
+        <tr><td>3</td><td>Anjali</td><td>1275</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="section-box" id="mainSection">
+    <h2>Challenges</h2>
+    <div class="quiz-cards">
+      <div class="card">
+        <h3>HTML Basics</h3>
+        <p>Learn how web pages are structured.</p>
+        <button onclick="showLesson('html')">Start</button>
+      </div>
+      <div class="card">
+        <h3>CSS Styling</h3>
+        <p>Explore how to make pages look great.</p>
+        <button onclick="showLesson('css')">Start</button>
+      </div>
+      <div class="card">
+        <h3>JavaScript</h3>
+        <p>Make your site interactive.</p>
+        <button onclick="showLesson('js')">Start</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-box lesson" id="lesson-html">
+    <h2>HTML Basics</h2>
+    <ul>
+      <li>&lt;html&gt;, &lt;head&gt;, &lt;body&gt;</li>
+      <li>&lt;p&gt;, &lt;h1&gt;-&lt;h6&gt;, &lt;ul&gt;/&lt;ol&gt;</li>
+      <li>Hyperlinks: &lt;a href=""&gt;</li>
+    </ul>
+    <button onclick="goBack()">Go Back</button>
+  </section>
+
+  <section class="section-box lesson" id="lesson-css">
+    <h2>CSS Styling</h2>
+    <ul>
+      <li>Selectors: .class, #id, element</li>
+      <li>Box Model: margin, padding, border</li>
+      <li>Flexbox and Grid basics</li>
+    </ul>
+    <button onclick="goBack()">Go Back</button>
+  </section>
+
+  <section class="section-box lesson" id="lesson-js">
+    <h2>JavaScript Basics</h2>
+    <ul>
+      <li>console.print("Hello"); ❌</li>
+      <li><strong>console.log("Hello"); ✅</strong></li>
+      <li>alert.log("Hello"); ❌</li>
+    </ul>
+    <button onclick="goBack()">Go Back</button>
+  </section>
+
+  <footer>
+    <p>© 2025 LearnUp | Crafted with ❤️ using DevOps Practices</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
